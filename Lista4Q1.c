@@ -1,14 +1,28 @@
 #include <stdio.h>
 
+// define f value OUTSIDE all functions!
+float f;
+
+
+float getFarenheit() {
+
+    printf("\nConversor de temperatura Farenheit-Celsius:\n");
+    printf("Digite valor (em ºF):\n");
+    scanf("%f", &f);
+
+    return f;
+
+}
+
 
 float calculaTemp() {
 
-    float c, f;
+    float c;
 
-    printf("Entre com um valor de temperatura em graus Farenheit:\n");
-    scanf("%f", &f);
+    // printf("Entre com um valor de temperatura em graus Farenheit:\n");
+    // scanf("%f", &f);
 
-    c = 5 * ((f - 32) / 9);
+    c = 5 * ((getFarenheit() - 32) / 9);
 
     return c;
 
@@ -18,7 +32,7 @@ float calculaTemp() {
 
 int main() {
 
-    printf("Temperatura em Fahrenheit = %.2fº Celsius\n", calculaTemp());
+    printf("Temperatura em %.2fº F = %.2fº C\n", f, calculaTemp());
 
     return 0;
 
