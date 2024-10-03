@@ -2,6 +2,13 @@
 
 /*
 
+Quando você usa scanf("%c", &c);, ele lê o caractere, mas não ignora os
+caracteres de nova linha (\n) que são gerados ao pressionar Enter. Isso
+pode causar problemas na leitura dos caracteres subsequentes.
+
+Uma maneira de corrigir isso é usar um espaço antes de %c no scanf para
+ignorar os caracteres de espaço em branco, incluindo novas linhas.
+
 Quando você usa scanf para ler caracteres (%c), ele lê exatamente o próximo
 caractere da entrada, incluindo espaços em branco, novas linhas (\n),
 tabulações (\t), etc. Isso pode causar problemas, especialmente quando você
