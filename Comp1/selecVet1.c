@@ -2,7 +2,7 @@
 #define MAX 100
 
 
-void readArray(float *p) {                    // reads array using pointers
+void readArray(float *p) {                  // reads array using pointers
     
     for (int i = 0; i < MAX; i++) {
         scanf("%f", p);                     // p: works as &(variable) address, in scanf()
@@ -16,10 +16,10 @@ void writeArray(float *p) {
     for (int i = 0; i < MAX; i++) {
         
         if (*p <= 10.0) {                         // we want all values pointed by pointer under or equal 10
-            printf("A[%d] = %.1f\n", i, *p);       // prints pointer value
+            printf("A[%d] = %.1f\n", i, *p);      // prints pointer value
         }
 
-        p = p + 1;                              // same as p++
+        p = p + 1;                                // same as p++
     }
 }
 
